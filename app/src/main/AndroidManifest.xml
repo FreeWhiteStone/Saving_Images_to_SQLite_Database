@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.free.grad"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/imageedit_6_7307893399"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.free.grad.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.free.grad.AddPlant"
+            android:parentActivityName="info.androidhive.actionbar.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+        <activity
+            android:name="com.example.free.grad.PlantDetail"
+            android:parentActivityName="info.androidhive.actionbar.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+        <activity
+            android:name="com.example.free.grad.EditPlant"
+            android:parentActivityName="info.androidhive.actionbar.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+        <receiver android:process=":remote" android:name="com.example.free.grad.AlarmReceiver"></receiver>
+    </application>
+
+</manifest>
